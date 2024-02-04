@@ -9,6 +9,13 @@
  Multi-Tenant Laravel Project with InertiaJS
 
 This Laravel application is designed for a multi-tenant architecture, providing a simple and efficient user experience using InertiaJS.
+## Project Setup
+-composer install 
+-npm install 
+-npm run dev 
+-php artisan app:setup-database
+
+###Done Now link tow test Domin lIke kfc.test and mac.test on localHost project
 
 ## Project Overview
 
