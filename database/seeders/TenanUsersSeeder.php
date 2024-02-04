@@ -32,7 +32,7 @@ class TenanUsersSeeder extends Seeder
 
            User::create([
                 'name' => 'Admin '.$tenant->name,
-                'email' => fake()->unique()->safeEmail,
+                'email' => $tenant->name.'@email.com',
                 'password' => bcrypt('123456789'),
                 'role' => 2, //type 2 for tenant Admin
                 'ApiKey' => $tenant->ApiKey,
@@ -40,11 +40,11 @@ class TenanUsersSeeder extends Seeder
             ]);
             
 
-            for ($i = 0; $i < 100; $i++) {
+            for ($i = 0; $i < 20; $i++) {
                 $email = fake()->unique()->safeEmail;
                User::create([
                     'name' => fake()->name(),
-                    'email' => $email,
+                    'email' => $tenant->name.'user-'.$i.'@email.com',
                     'password' => bcrypt('123456789'),
                     'ApiKey' => $tenant->ApiKey,
                 ]);
